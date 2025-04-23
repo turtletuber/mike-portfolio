@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Youtube } from 'lucide-react';
-import ResourceLibrary from './ResourceLibrary';
+import ResourceLibrary from './ResourceLibrary.js';
 
 const metrics = [
   { value: '1,500+', label: 'Students Reached'},
