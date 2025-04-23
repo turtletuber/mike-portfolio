@@ -195,7 +195,7 @@ export default function Home() {
 
       {/* Nonprofit */}
       <section id="nonprofit" className="max-w-6xl mx-auto py-16">
-        <div className="text-center mb-10">
+  <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Kids Should Make Things</h2>
           <p className="text-gray-700 max-w-2xl mx-auto">
             Our 501(c)(3) nonprofit provides project plans, materials, and support to kids to create in their homes, libraries, and community spaces. Everything they make, they keep.
@@ -206,21 +206,21 @@ export default function Home() {
           >
             Support a STEM Project
           </a>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {[
-            { icon: '🔧', title: 'Our Mission', text: 'To provide hands‑on STEM project opportunities to all children, regardless of background or resources.' },
-            { icon: '🌱', title: 'Interest Driven', text: 'Kids personalize what they make within scaffolded project plans. Human and AI support help overcome challenges.' },
-            { icon: '👥', title: 'Community', text: 'We partner with urban neighborhood centers, libraries, tribal centers, and rural organizations.' },
-          ].map((card, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow p-6 space-y-4 flex flex-col items-center text-center">
-              <span className="text-4xl">{card.icon}</span>
-              <h3 className="text-xl font-bold">{card.title}</h3>
-              <p className="text-gray-700">{card.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+  </div>
+  <div className="grid md:grid-cols-3 gap-8 mt-12">
+  {[
+    { icon: '🧰', title: 'Kits, content, and tech', text: 'let us be there when we can\'t be in person.' },
+    { icon: '🔥', title: 'Learning content', text: 'should be as engaging as your favorite social feed.' },
+    { icon: '💫', title: 'Create for all kids', text: 'knowing some learn without schools, systems, or guardians.' },
+  ].map((card, idx) => (
+    <div key={idx} className="bg-white rounded-xl shadow p-6 space-y-4 flex flex-col items-center text-center">
+      <span className="text-4xl">{card.icon}</span>
+      <h3 className="text-xl font-bold">{card.title}</h3>
+      <p className="text-gray-700">{card.text}</p>
+    </div>
+  ))}
+</div>
+</section>
 
       {/* Contact */}
       <section id="contact" className="max-w-6xl mx-auto py-16">
@@ -246,25 +246,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-white">
-        <div className="max-w-6xl mx-auto py-12 flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center font-bold">MA</div>
-            <div>
-              <p className="font-bold">Mike Amato</p>
-              <p className="text-sm">STEM Educator | Engineer | Ed‑Tech Consultant</p>
-            </div>
-          </div>
-          <ul className="flex gap-6 mt-6 md:mt-0">
-            <li><Link href="#impact">Impact</Link></li>
-            <li><Link href="#activity">Recent Activity</Link></li>
-            <li><Link href="#experience">Experience</Link></li>
-            <li><Link href="#resources">Resource Library</Link></li>
-            <li><Link href="#nonprofit">Nonprofit</Link></li>
-            <li><Link href="#contact">Contact</Link></li>
-          </ul>
-          <p className="text-sm mt-6 md:mt-0">© 2025 Mike Amato. All rights reserved.</p>
-        </div>
+      <footer className="bg-primary text-white text-center py-8 text-xs">
+        Media, Projects Plans, and Website by Mike 🤓
       </footer>
     </main>
   );
