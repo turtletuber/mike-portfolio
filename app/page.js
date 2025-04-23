@@ -12,7 +12,7 @@ const metrics = [
 const impactBullets = [
   { bold:'Classroom Tech Integration', text:'Helping schools integrate tech in ways that actually work for teachers and students. Not complicating it and ensuring compliance and practicality.'},
   { bold:'Project & Problem-Based Learning', text:'From electric motor kits for distance learning to school-wide STEM events, I design experiences where students do first, while understanding.'},
-  { bold:'Inclusion by Design', text:'Using Universal Design for Learning (UDL) to create classrooms where every student thrives, not just the "STEM naturals".'},
+  { bold:'Making as Method', text:'I don’t just plan or manage. I make. I prototype the kits, code the tools, and run the workshops so I keep learning alongside my students and understand what teachers really need.'},
 ];
 
 const impactMetrics = [
@@ -51,7 +51,7 @@ const activities = [
 const experience = [
   {
     period:'Oct 2021 – Dec 2024',
-    role:'PBL & STEM Specialist',
+    role:'STEM Program Manager',
     org:'Phoenix El. School District #1',
     bullets:[
       'Designed and led project-based STEM courses for 350 students (grades 4–8), collaborating with industry experts to develop scalable hands‑on STEM projects.',
@@ -148,7 +148,7 @@ export default function Home() {
 
       {/* Recent Activity */}
       <section id="activity" className="max-w-6xl mx-auto py-16">
-        <h2 className="text-3xl font-bold mb-8">Recent Activity</h2>
+        <h2 className="text-3xl font-bold mb-8">Coming Soon</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {activities.map(a => (
             <article key={a.title} className="bg-white rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
@@ -167,13 +167,14 @@ export default function Home() {
       {/* Experience */}
       <section id="experience" className="max-w-6xl mx-auto py-16">
         <h2 className="text-3xl font-bold mb-8">Experience</h2>
-        <div className="space-y-12">
+        <div className="space-y-10">
           {experience.map((exp, idx) => (
-            <div key={idx} className="border-l-2 border-primary pl-6">
+            <div key={idx} className="bg-white rounded-xl shadow p-8 border-l-4 border-primary flex flex-col max-w-3xl mx-auto">
               <p className="text-sm text-gray-500">{exp.period}</p>
-              <h3 className="text-xl font-bold">{exp.role}</h3>
-              <p className="text-primary">{exp.org}</p>
-              <ul className="list-disc pl-6 mt-4 space-y-2">
+              <h3 className="text-xl font-bold mt-1">{exp.role}</h3>
+              <p className="text-primary mb-4">{exp.org}</p>
+              <hr className="my-4 border-gray-200" />
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 text-sm">
                 {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
               </ul>
             </div>
