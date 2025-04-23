@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Youtube } from 'lucide-react';
+import ResourceLibrary from './ResourceLibrary';
 
 const metrics = [
   { value: '1,500+', label: 'Students Reached'},
@@ -54,8 +55,8 @@ const experience = [
     role:'STEM Program Manager',
     org:'Phoenix El. School District #1',
     bullets:[
-      'Designed and led project-based STEM courses for 350 students (grades 4–8), collaborating with industry experts to develop scalable hands‑on STEM projects.',
-      'Collaborated with school teachers and district executives to plan, budget, and expand project-based learning opportunities at Board Elementary.',
+      'Designed and led project-based STEM courses for 350 students (grades 4–8), collaborating with industry experts to develop scalable hands-on STEM projects.',
+      'Managed classroom technology for STEM Makerspace, implementing advanced tools access. Oversaw safety protocols and ensured accessibility features were compliant with UDL principles and special education requirements.',
       'Organized quarterly STEM events reaching 400+ students and staff, boosting engagement and showcasing real-world STEM applications.',
     ],
   },
@@ -64,9 +65,9 @@ const experience = [
     role:'Ed‑Tech Consultant',
     org:'ElevateU',
     bullets:[
-      'Partnered with university professors to develop, iterate, and launch digital course materials from existing literature, catering to hundreds of students.',
-      'Collaborated with software engineering teams to prioritize feature development, reducing product launch time by 30%.',
-      'Conducted user feedback sessions and data analyses, informing roadmap decisions aligned with professors needs, student feedback, and engineering constraints.',
+      'Partnered with professors from various universities to transform traditional course materials into AI-powered digital textbooks, ensuring accessibility through UDL principles and FERPA/COPPA compliance.',
+      'Led discovery calls with professors and managed software engineering team execution, delivering three uniquely tailored AI-enhanced courses for Spring 2021 launch.',
+      'Conducted user feedback sessions and data analyses to improve product design and align with pedagogical best practices.',
     ],
   },
   {
@@ -74,9 +75,9 @@ const experience = [
     role:'Teaching Assistant',
     org:'Fulton Schools of Engineering, ASU',
     bullets:[
-      'Facilitated semester‑long, project‑based learning for 80–120 interdisciplinary students, integrating programming principles, hands‑on engineering activities, and venture development.',
-      'Collaborated with faculty to refine course assignments, rubrics, grading, and learning modules; resulting in measurable increases in student satisfaction.',
-      'Communicated across one‑on‑one interactions, public speaking, pitching, and leading workshops with groups ranging from 5 to 200 participants.',
+      'Administered lab technology systems for engineering courses, ensuring safety and learning outcomes for 100+ student workstations while maintaining compliance with university technology policies.',
+      'Mentored 80–120 interdisciplinary students per semester in project-based assignments, integrating educational technology tools to enhance understanding of fundamental engineering concepts.',
+      'Communicated effectively through one-on-one interactions, public speaking, pitching, and leading workshops with groups ranging from 5 to 200 participants, utilizing technology and digital collaboration tools.',
     ],
   },
 ];
@@ -186,21 +187,7 @@ export default function Home() {
       <section id="resources" className="max-w-6xl mx-auto py-10 md:py-16 px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Resource Library</h2>
         <p className="text-gray-700 mb-6 md:mb-8 text-sm md:text-base">Access articles, video tutorials, downloadable materials, and other educational resources for STEAM learning.</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {resources.map((r, idx) => (
-            <article key={idx} className="relative rounded-xl overflow-hidden shadow flex flex-col h-auto">
-              <div className="flex-1 flex flex-col">
-                <Image src={r.thumb} alt={r.title} width={400} height={250} className="object-cover h-full w-full" />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 text-white">
-                  <span className="text-xs font-bold uppercase tracking-wide">{r.category}</span>
-                  <h3 className="text-base md:text-lg font-semibold">{r.title}</h3>
-                  <p className="text-xs md:text-sm">{r.desc}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ResourceLibrary />
         <div className="text-center mt-12">
           <Link href="#contact" className="inline-block border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition w-full md:w-fit">Request Custom Curriculum</Link>
         </div>
