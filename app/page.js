@@ -5,7 +5,7 @@ import { Mail, Youtube } from 'lucide-react';
 
 const metrics = [
   { value: '1,500+', label: 'Students Reached'},
-  { value: '200+', label: 'STEM Kits Distributed'},
+  { value: '200+', label: 'Kits Distributed'},
   { value: '30+', label: 'Workshops Hosted'},
 ];
 
@@ -94,70 +94,70 @@ export default function Home() {
   return (
       <main className="overflow-x-hidden">
       {/* Hero */}
-      <section id="hero" className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center py-16 gap-8">
-        <div className="flex-1">
-          <h1 className="text-5xl font-extrabold mb-2">Mike Amato</h1>
-          <h2 className="text-lg font-medium text-gray-600 mb-4">STEM Educator | Engineer | Ed‑Tech Consultant</h2>
-          <p className="text-gray-700 mb-8 max-w-prose">Taking intimidating concepts and making them tactile, playful, and deeply human. Passionate about making engineering education fun, memorable, and inclusive for all learners.</p>
-          <div className="grid grid-cols-3 gap-4 mb-8">
+      <section id="hero" className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center py-10 md:py-16 gap-6 md:gap-8 px-4">
+        <div className="flex-1 w-full">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-2">Mike Amato</h1>
+          <h2 className="text-base md:text-lg font-medium text-gray-600 mb-4">STEM Educator | Engineer | Ed‑Tech Consultant</h2>
+          <p className="text-gray-700 mb-6 md:mb-8 max-w-prose text-sm md:text-base">Taking intimidating concepts and making them tactile, playful, and deeply human. Passionate about making engineering education fun, memorable, and inclusive for all learners.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 md:mb-8">
             {metrics.map((m) => (
               <div key={m.label} className="bg-white shadow rounded-lg p-4 text-center">
-                <p className="text-2xl font-extrabold text-primary">{m.value}</p>
-                <p className="text-sm text-gray-600">{m.label}</p>
+                <p className="text-xl md:text-2xl font-extrabold text-primary">{m.value}</p>
+                <p className="text-xs md:text-sm text-gray-600">{m.label}</p>
               </div>
             ))}
           </div>
-          <Link href="#contact" className="inline-block bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">Get in Touch</Link>
+          <Link href="#contact" className="block w-full sm:w-fit bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition text-center">Get in Touch</Link>
         </div>
-        <div className="flex-1">
-          <Image src="/images/hero.png" alt="Mike working with students" width={600} height={450} className="rounded-xl object-cover" />
+        <div className="flex-1 w-full flex justify-center">
+          <Image src="/images/hero.png" alt="Mike working with students" width={600} height={450} className="rounded-xl object-cover w-full max-w-[400px] md:max-w-[600px] h-auto" />
         </div>
       </section>
 
       {/* Impact */}
-      <section id="impact" className="max-w-6xl mx-auto py-16">
-        <h2 className="text-3xl font-bold mb-8">How I Make an Impact</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+      <section id="impact" className="max-w-6xl mx-auto py-10 md:py-16 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">How I Make an Impact</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Left Column: Bullets & Metrics */}
           <div className="flex flex-col items-start">
-            <ul className="space-y-6 mb-8">
+            <ul className="space-y-4 md:space-y-6 mb-6 md:mb-8">
               {impactBullets.map((b) => (
                 <li key={b.bold} className="flex">
                   <span className="h-2 w-2 bg-primary rounded-full mt-2 mr-3" />
-                  <p><strong>{b.bold}:</strong> {b.text}</p>
+                  <p className="text-sm md:text-base"><strong>{b.bold}:</strong> {b.text}</p>
                 </li>
               ))}
             </ul>
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-3 gap-4 max-w-md w-full justify-items-center">
+              <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-md w-full justify-items-center">
                 {impactMetrics.map(m => (
-                  <div key={m.label} className="bg-gray-50 border rounded-lg p-4 text-center">
-                    <p className="text-xl font-bold text-primary">{m.value}</p>
-                    <p className="text-sm text-gray-600">{m.label}</p>
+                  <div key={m.label} className="bg-gray-50 border rounded-lg p-2 md:p-4 text-center">
+                    <p className="text-base md:text-xl font-bold text-primary">{m.value}</p>
+                    <p className="text-xs md:text-sm text-gray-600">{m.label}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
           {/* Right Column: Image Only */}
-          <div className="flex flex-col items-center">
-            <Image src="/images/headshot_mike.png" alt="Mike in safety goggles" width={400} height={300} className="rounded-xl object-cover" />
+          <div className="flex flex-col items-center mt-6 md:mt-0">
+            <Image src="/images/headshot_mike.png" alt="Mike in safety goggles" width={400} height={300} className="rounded-xl object-cover w-full max-w-[300px] md:max-w-[400px] h-auto" />
           </div>
         </div>
       </section>
 
       {/* Recent Activity */}
-      <section id="activity" className="max-w-6xl mx-auto py-16">
-        <h2 className="text-3xl font-bold mb-8">Coming Soon</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+      <section id="activity" className="max-w-6xl mx-auto py-10 md:py-16 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Coming Soon</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {activities.map(a => (
-            <article key={a.title} className="bg-white rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-              <Image src={a.thumb} alt={a.title} width={400} height={250} className="rounded-t-xl object-cover" />
-              <div className="p-5 space-y-2">
+            <article key={a.title} className="bg-white rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+              <Image src={a.thumb} alt={a.title} width={400} height={250} className="rounded-t-xl object-cover w-full h-auto max-h-[200px] md:max-h-[250px]" />
+              <div className="p-4 md:p-5 space-y-1 md:space-y-2 flex-1 flex flex-col">
                 <span className="text-xs font-bold uppercase tracking-wide text-primary">{a.category}</span>
-                <h3 className="font-semibold">{a.title}</h3>
-                <p className="text-sm text-gray-600">{a.desc}</p>
-                <Link href={a.href} className="inline-flex items-center gap-1 text-primary font-semibold text-sm">View Details&nbsp;→</Link>
+                <h3 className="font-semibold text-sm md:text-base">{a.title}</h3>
+                <p className="text-xs md:text-sm text-gray-600">{a.desc}</p>
+                <Link href={a.href} className="inline-flex items-center gap-1 text-primary font-semibold text-xs md:text-sm mt-auto">View Details&nbsp;→</Link>
               </div>
             </article>
           ))}
@@ -165,16 +165,16 @@ export default function Home() {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="max-w-6xl mx-auto py-16">
-        <h2 className="text-3xl font-bold mb-8">Experience</h2>
-        <div className="space-y-10">
+      <section id="experience" className="max-w-6xl mx-auto py-10 md:py-16 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Experience</h2>
+        <div className="space-y-8 md:space-y-10">
           {experience.map((exp, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow p-8 border-l-4 border-primary flex flex-col max-w-3xl mx-auto">
-              <p className="text-sm text-gray-500">{exp.period}</p>
-              <h3 className="text-xl font-bold mt-1">{exp.role}</h3>
-              <p className="text-primary mb-4">{exp.org}</p>
-              <hr className="my-4 border-gray-200" />
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 text-sm">
+            <div key={idx} className="bg-white rounded-xl shadow p-4 md:p-8 border-l-4 border-primary flex flex-col max-w-full md:max-w-3xl mx-auto">
+              <p className="text-xs md:text-sm text-gray-500">{exp.period}</p>
+              <h3 className="text-lg md:text-xl font-bold mt-1">{exp.role}</h3>
+              <p className="text-primary mb-2 md:mb-4 text-sm md:text-base">{exp.org}</p>
+              <hr className="my-3 md:my-4 border-gray-200" />
+              <ul className="list-disc pl-4 md:pl-6 space-y-1 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
               </ul>
             </div>
@@ -183,26 +183,26 @@ export default function Home() {
       </section>
 
       {/* Resource Library */}
-      <section id="resources" className="max-w-6xl mx-auto py-16">
-        <h2 className="text-3xl font-bold mb-8">Resource Library</h2>
-        <p className="text-gray-700 mb-8">Access articles, video tutorials, downloadable materials, and other educational resources for STEAM learning.</p>
-        <div className="grid md:grid-cols-3 gap-8">
+      <section id="resources" className="max-w-6xl mx-auto py-10 md:py-16 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Resource Library</h2>
+        <p className="text-gray-700 mb-6 md:mb-8 text-sm md:text-base">Access articles, video tutorials, downloadable materials, and other educational resources for STEAM learning.</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {resources.map((r, idx) => (
-            <article key={idx} className="relative rounded-xl overflow-hidden shadow flex flex-col h-[250px]">
+            <article key={idx} className="relative rounded-xl overflow-hidden shadow flex flex-col h-auto">
               <div className="flex-1 flex flex-col">
                 <Image src={r.thumb} alt={r.title} width={400} height={250} className="object-cover h-full w-full" />
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute bottom-4 left-4 z-10 text-white">
+                <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 text-white">
                   <span className="text-xs font-bold uppercase tracking-wide">{r.category}</span>
-                  <h3 className="text-lg font-semibold">{r.title}</h3>
-                  <p className="text-sm">{r.desc}</p>
+                  <h3 className="text-base md:text-lg font-semibold">{r.title}</h3>
+                  <p className="text-xs md:text-sm">{r.desc}</p>
                 </div>
               </div>
             </article>
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link href="#contact" className="inline-block border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition">Request Custom Curriculum</Link>
+          <Link href="#contact" className="inline-block border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition w-full md:w-fit">Request Custom Curriculum</Link>
         </div>
       </section>
 
