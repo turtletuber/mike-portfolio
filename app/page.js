@@ -28,7 +28,7 @@ const activities = [
     category:'Research',
     date:'Apr 8, 2025',
     desc:'New research paper exploring ethical boundaries and educational opportunities with AI tools in academic settings.',
-    href:'#',
+    href:'/genai-presentation',
     thumb:'/images/research.png'
   },
   {
@@ -62,7 +62,7 @@ const experience = [
   },
   {
     period:'Aug 2020 – Aug 2021',
-    role:'Ed‑Tech Consultant',
+    role:'Product Manager',
     org:'ElevateU',
     bullets:[
       'Partnered with professors from various universities to transform traditional course materials into AI-powered digital textbooks, ensuring accessibility through UDL principles and FERPA/COPPA compliance.',
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recent Activity */}
+      {/* Recent Activity (now called "Coming Soon") */}
       <section id="activity" className="max-w-6xl mx-auto py-10 md:py-16 px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Coming Soon</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
